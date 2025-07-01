@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mashruzzaman Saad – Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/motion-css@2.1.2/dist/motion.min.css">
+  <script src="https://kit.fontawesome.com/a2c5e0ad3f.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      color: white;
+      overflow-x: hidden;
+      position: relative;
+      z-index: 1;
+    }
+
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(12px);
+      background-color: rgba(255, 255, 255, 0.05);
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    nav a {
+      color: #81ecec;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #00cec9;
+    }
+
+    header {
+      text-align: center;
+      padding: 100px 20px 60px;
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+      background: linear-gradient(to right, #00f2fe, #4facfe);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: fadeInDown 1s ease;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      color: #dfe6e9;
+      opacity: 0.8;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    section {
+      margin-bottom: 80px;
+    }
+
+    section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      background: linear-gradient(to right, #74ebd5, #9face6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.3 );
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+    }
+
+    .glass-card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      padding: 8px 0;
+      position: relative;
+      padding-left: 1.5em;
+    }
+
+    ul li::before {
+      content: '✔';
+      position: absolute;
+      left: 0;
+      color: #00cec9;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 16px;
+      padding: 20px;
+      color: #dfe6e9;
+      transition: 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      background: rgba(255,255,255,0.08);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      background: rgba(255,255,255,0.03);
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .contact-info p {
+      margin: 0.5em 0;
+      font-size: 1.05rem;
+    }
+
+    .contact-info i {
+      margin-right: 8px;
+      color: #00cec9;
+    }
+
+    @keyframes fadeInDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-40px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Particle Background -->
+<div id="particles-js"></div>
+
+<!-- Navigation -->
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- Hero Section -->
+<header class="motion-fade-in">
+  <h1>Mashruzzaman Saad</h1>
+  <p>Teacher • Programmer • Roboticist • Editor</p>
+</header>
+
+<div class="container">
+
+  <!-- About -->
+  <section id="about" class="motion-slide-up">
+    <h2>👋 About Me</h2>
+    <div class="glass-card">
+      <p>
+        I'm a computer science student with a passion for turning ideas into working solutions. I specialize in teaching, robotics, web development, and video editing.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="motion-slide-up">
+    <h2>🛠️ Skills & Specializations</h2>
+    <div class="glass-card">
+      <ul>
+        <li>Teaching programming & robotics</li>
+        <li>Web development: PHP, SQL, Flask, HTML/CSS</li>
+        <li>Embedded systems: ESP32, Bluetooth, sensors</li>
+        <li>Video editing: DaVinci Resolve</li>
+        <li>UI/UX wireframes, posters, and layout design</li>
+        <li>Basic machine learning with Python</li>
+        <li>Creative writing – lyrics, book writing</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="motion-fade-in">
+    <h2>🚀 Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card motion-zoom-in">
+        <h3>NABIK ROV</h3>
+        <p>Surface water drone used to support flood relief operations.</p>
+      </div>
+      <div class="project-card motion-zoom-in">
+        <h3>Soccer Bot</h3>
+        <p>Bluetooth-controlled soccer robot with motor driver and serial communication.</p>
+      </div>
+      <div class="project-card motion-zoom-in">
+        <h3>Property Listing Platform</h3>
+        <p>A PHP+SQL web app where users post and search properties.</p>
+      </div>
+      <div class="project-card motion-zoom-in">
+        <h3>Flight Delay Predictor</h3>
+        <p>Python ML project analyzing causes of delays using flight data.</p>
+      </div>
+      <div class="project-card motion-zoom-in">
+        <h3>Video Editing Projects</h3>
+        <p>Edited vlogs, live performances; taught editing in DaVinci Resolve.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="motion-slide-right">
+    <h2>📬 Contact</h2>
+    <div class="glass-card contact-info">
+      <p><i class="fas fa-envelope"></i> mashruzzamansaad@email.com</p>
+      <p><i class="fab fa-linkedin"></i> inkedin.com/in/mashruzzaman/</p>
+      <p><i class="fab fa-github"></i> github.com/SieHang21</p>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  &copy; 2025 Mashruzzaman Saad. All rights reserved.
+</footer>
+
+<!-- Particles.js Config -->
+<script>
+  particlesJS("particles-js", {
+    particles: {
+      number: { value: 60, density: { enable: true, value_area: 900 } },
+      color: { value: "#ffffff" },
+      shape: {
+        type: "circle",
+        stroke: { width: 0, color: "#000000" },
+        polygon: { nb_sides: 5 }
+      },
+      opacity: {
+        value: 0.5,
+        random: true,
+        anim: { enable: true, speed: 0.5, opacity_min: 0.1, sync: false }
+      },
+      size: {
+        value: 3,
+        random: true,
+        anim: { enable: true, speed: 4, size_min: 0.3, sync: false }
+      },
+      line_linked: {
+        enable: true,
+        distance: 150,
+        color: "#ffffff",
+        opacity: 0.3,
+        width: 1
+      },
+      move: {
+        enable: true,
+        speed: 2,
+        direction: "none",
+        random: true,
+        straight: false,
+        out_mode: "out",
+        bounce: false
+      }
+    },
+    interactivity: {
+      detect_on: "canvas",
+      events: {
+        onhover: { enable: true, mode: "grab" },
+        onclick: { enable: true, mode: "push" },
+        resize: true
+      },
+      modes: {
+        grab: { distance: 140, line_linked: { opacity: 0.5 } },
+        push: { particles_nb: 4 }
+      }
+    },
+    retina_detect: true
+  });
+</script>
+
+</body>
+</html>
